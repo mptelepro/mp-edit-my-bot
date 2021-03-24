@@ -6,7 +6,9 @@ from config import Config
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
 Jebot = Client(
-   "Telegraph Uploader",   
+   "Telegraph Uploader",
+   api_id=Config.APP_ID,
+   api_hash=Config.API_HASH,
    bot_token=Config.TG_BOT_TOKEN,
 )
 
@@ -82,54 +84,6 @@ async def about(client, message):
                             ),        
             disable_web_page_preview=True,        
             parse_mode="html")
-
-@Jebot.on_message(filters.photo)
-async def telegraphphoto(client, message):
-    msg = await message.reply_text("Uploading To Telegraph...")
-    download_location = await client.download_media(
-        message=message, file_name='root/jetg')
-    try:
-        response = upload_file(download_location)
-    except:
-        await msg.edit_text("Photo size should be less than 5mb!") 
-    else:
-        await msg.edit_text(f'**Uploaded To Telegraph!\n\n👉 https://telegra.ph{response[0]}\n\n~ @munnipopz**',
-            disable_web_page_preview=True,
-        )
-    finally:
-        os.remove(download_location)
-
-@Jebot.on_message(filters.video)
-async def telegraphvid(client, message):
-    msg = await message.reply_text("Uploading To Telegraph...")
-    download_location = await client.download_media(
-        message=message, file_name='root/jetg')
-    try:
-        response = upload_file(download_location)
-    except:
-        await msg.edit_text("Video size should be less than 5mb!") 
-    else:
-        await msg.edit_text(f'**Uploaded To Telegraph!\n\n👉 https://telegra.ph{response[0]}\n\n~ @munnipopz**',
-            disable_web_page_preview=True,
-        )
-    finally:
-        os.remove(download_location)
-
-@Jebot.on_message(filters.animation)
-async def telegraphgif(client, message):
-    msg = await message.reply_text("Uploading To Telegraph...")
-    download_location = await client.download_media(
-        message=message, file_name='root/jetg')
-    try:
-        response = upload_file(download_location)
-    except:
-        await msg.edit_text("Gif size should be less than 5mb!") 
-    else:
-        await msg.edit_text(f'**Uploaded To Telegraph!\n\n👉 https://telegra.ph{response[0]}\n\n~ @munnipopz**',
-            disable_web_page_preview=True,
-        )
-    finally:
-        os.remove(download_location)
 
 @Jebot.on_callback_query()
 async def button(bot, update):
