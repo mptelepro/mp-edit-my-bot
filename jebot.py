@@ -4,6 +4,10 @@ from pyrogram import Client, filters
 from telegraph import upload_file
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
+Jebot = Client(
+   "Telegraph Uploader",   
+   bot_token=Config.TG_BOT_TOKEN,
+)
 
 @Jebot.on_message(filters.command("start"))
 async def start(client, message):
