@@ -19,9 +19,9 @@ async def start(client, message):
         chat_id=message.chat.id,
                text="""<b>♞ Developer:</b> <a href="https://dog/t.me/mazhatthullikal</b>
 
-<b>♞ Developer:</b> <a href="https://t.me/munnipopz</a>
+<b>♞ Developer:</b> <a href="https://dog/t.me/mazhatthullikal</a>
 
-<b>♞ Support:</b> <a href="https://t.me/munnipopz">Infinity BOTs Support</a>
+<b>♞ Support:</b> <a href="https://dog/t.me/mazhatthullikal">Infinity BOTs Support</a>
 
 <b>♞ Library:</b> <a href="https://dog/t.me/mazhatthullikal">Pyrogram</a>
 
