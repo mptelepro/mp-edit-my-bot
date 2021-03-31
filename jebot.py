@@ -71,11 +71,6 @@ async def mp(client, message):
                chat_id=message.chat.id,
                text="""<b>Mp Telegraph Bot!</b>
 
-<b>♞ Developer:</b> <a href="https://t.me/munnipopz</a>
-
-<b>♞ Support:</b> <a href="https://t.me/munnipopz">Infinity BOTs Support</a>
-
-<b>♞ Library:</b> <a href="https://t.me/munnipopz">Pyrogram</a>
 
 <b>~ @munnipopz</b>""",
      reply_markup=InlineKeyboardMarkup(
@@ -83,7 +78,7 @@ async def mp(client, message):
                                         InlineKeyboardButton(
                                             "Back", callback_data="help"),
                                         InlineKeyboardButton(
-                                            "mp", callback_data="mp")
+                                            "About", callback_data="about")
                                     ]]
                             ),        
             disable_web_page_preview=True,        
@@ -96,11 +91,6 @@ async def about(client, message):
                chat_id=message.chat.id,
                text="""<b>About Telegraph Bot!</b>
 
-<b>♞ Developer:</b> <a href="https://t.me/munnipopz</a>
-
-<b>♞ Support:</b> <a href="https://t.me/munnipopz">Infinity BOTs Support</a>
-
-<b>♞ Library:</b> <a href="https://t.me/munnipopz">Pyrogram</a>
 
 <b>~ @munnipopz</b>""",
      reply_markup=InlineKeyboardMarkup(
@@ -108,7 +98,7 @@ async def about(client, message):
                                         InlineKeyboardButton(
                                             "Back", callback_data="help"),
                                         InlineKeyboardButton(
-                                            "mp", callback_data="mp")
+                                            "Start", callback_data="start")
                                     ]]
                             ),        
             disable_web_page_preview=True,        
