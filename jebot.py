@@ -65,7 +65,7 @@ Just send a photo or video less than 5mb file size, I'll upload it to telegraph.
             parse_mode="html")
 
 @Jebot.on_message(filters.command("mp"))
-async def bots(client, message):
+async def mp(client, message):
     if message.chat.type == 'private':   
         await Jebot.send_message(
                chat_id=message.chat.id,
