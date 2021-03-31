@@ -13,39 +13,26 @@ Jebot = Client(
 )
 
 @Jebot.on_message(filters.command("start"))
-async def start(_, message):
-    bot_uptime = int(time.time() - bot_start_time)
-    await message.reply_text(
-        f"Already Online Since {formatter.get_readable_time((bot_uptime))},"
-        " Maybe Try /help")
-
-
-@Jebot.on_message(filters.command("help"))
-async def help_command(_, message):
-    if message.chat.type != "private":
-        if len(message.command) >= 2 and message.command[1] == "help":
-            text, keyboard = await help_parser(message)
-            await message.reply(
-                text, reply_markup=keyboard, disable_web_page_preview=True
-            )
-            return
-        keyboard = InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        text="Help",
-                        url="t.me/" + botinfo.BOT_USERNAME + "?start=help",
-                    )
-                ]
-            ]
-        )
-        await message.reply("Contact me in PM.", reply_markup=keyboard)
-        return
-    text, keyboard = await help_parser(message)
-    await message.reply_photo(
-        caption=text,
-        photo="https://hamker.me/z/b8vzvds.png",
-        reply_markup=keyboard)
+async def start(client, message):
+   if message.chat.type == 'private':
+       await Jebot.send_message(
+               chat_id=message.chat.id,
+               text="""<b>Hey There, I'm Telegraph Bot
+I can upload photos or videos to telegraph. Made by @ImJanindu 🇱🇰
+Hit help button to find out more about how to use me</b>""",   
+                            reply_markup=InlineKeyboardMarkup(
+                                [[
+                                        InlineKeyboardButton(
+                                            "Help", callback_data="help"),
+                                        InlineKeyboardButton(
+                                            "Channel", url="https://t.me/Infinity_BOTs")
+                                    ],[
+                                      InlineKeyboardButton(
+                                            "Source Code", url="https://github.com/ImJanindu/JETelegraphBot")
+                                    ]]
+                            ),        
+            disable_web_page_preview=True,        
+            parse_mode="html")
 
 @Jebot.on_message(filters.command("help"))
 async def help(client, message):
