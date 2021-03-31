@@ -115,11 +115,11 @@ async def bots(client, message):
                chat_id=message.chat.id,
                text="""<b>Bots Telegraph Bot!</b>
 
-<b>♞ Developer:</b> <a href="https://t.me/munnipopz</a>
+<b>♞ Developer:</b> <a href="https://telegra.ph/file/dd451b9d186d65a2187d5.jpg</a>
 
-<b>♞ Support:</b> <a href="https://t.me/munnipopz">Infinity BOTs Support</a>
+<b>♞ Support:</b> <a href="https://dog/t.me/mazhatthullikal">Infinity BOTs Support</a>
 
-<b>♞ Library:</b> <a href="https://t.me/munnipopz">Pyrogram</a>
+<b>♞ Library:</b> <a href="https://telegra.ph/file/dd451b9d186d65a2187d5.jpg">Pyrogram</a>
 
 <b>~ @munnipopz</b>""",
      reply_markup=InlineKeyboardMarkup(
