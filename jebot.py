@@ -69,7 +69,7 @@ async def bots(client, message):
     if message.chat.type == 'private':   
         await Jebot.send_message(
                chat_id=message.chat.id,
-               text="""<b>mp Telegraph Bot!</b>
+               text="""<b>Mp Telegraph Bot!</b>
 
 <b>♞ Developer:</b> <a href="https://t.me/munnipopz</a>
 
