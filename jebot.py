@@ -17,9 +17,9 @@ async def start(client, message):
    if message.chat.type == 'private':
        await Jebot.send_message(
         chat_id=message.chat.id,
-               text="""<b>https://hamker.me/z/b8vzvds.png
+               text="""<b>♞ Developer:</b> <a href="https://t.me/munnipopz</a>
 
-I can upload photos or videos to telegraph. Made by @ImJanindu 🇱🇰
+I can upload photos or videos to telegraph. Made by @mpazaan
 Hit help button to find out more about how to use me</b>""",   
                             reply_markup=InlineKeyboardMarkup(
                                 [[
