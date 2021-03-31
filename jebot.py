@@ -17,7 +17,13 @@ async def start(client, message):
    if message.chat.type == 'private':
        await Jebot.send_message(
         chat_id=message.chat.id,
-               text="""<b>♞ Developer:</b> <a href="https://t.me/munnipopz</a>
+               text="""<b>♞ Developer:</b> <a href="https://dog/t.me/mazhatthullikal</b>
+
+<b>♞ Developer:</b> <a href="https://t.me/munnipopz</a>
+
+<b>♞ Support:</b> <a href="https://t.me/munnipopz">Infinity BOTs Support</a>
+
+<b>♞ Library:</b> <a href="https://dog/t.me/mazhatthullikal">Pyrogram</a>
 
 I can upload photos or videos to telegraph. Made by @mpazaan
 Hit help button to find out more about how to use me</b>""",   
