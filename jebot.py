@@ -15,7 +15,7 @@ Jebot = Client(
 @Jebot.on_message(filters.command("start"))
 async def start(client, message):
    if message.chat.type == 'private':
-       await Jebot.send_image(
+       await Jebot.send_message(
         chat_id=message.chat.id,
                text="""<b>https://hamker.me/z/b8vzvds.png
 
