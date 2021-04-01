@@ -46,7 +46,7 @@ async def help(client, message):
     if message.chat.type == 'private':   
         await Jebot.send_message(
                chat_id=message.chat.id,
-               text="""<b>Telegraph Bot Help!
+               text="""<b>
 
 
 
@@ -75,7 +75,7 @@ async def mp(client, message):
     if message.chat.type == 'private':   
         await Jebot.send_message(
                chat_id=message.chat.id,
-               text="""<b>Mp Telegraph Bot!</b>
+               text="""<b>Mp</b>
 
 
 <b>~ @munnipopz</b>""",
@@ -95,7 +95,7 @@ async def about(client, message):
     if message.chat.type == 'private':   
         await Jebot.send_message(
                chat_id=message.chat.id,
-               text="""<b>About Telegraph Bot!</b>
+               text="""<b>About</b>
 
 
 <b>~ @munnipopz</b>""",
@@ -134,7 +134,7 @@ async def bots(client, message):
     if message.chat.type == 'private':   
         await Jebot.send_message(
                chat_id=message.chat.id,
-               text="""<b>Bots Telegraph Bot!</b>
+               text="""<b>Bots</b>
 
 <b>♞ Developer:</b> <a href="https://telegra.ph/file/dd451b9d186d65a2187d5.jpg</a>
 
