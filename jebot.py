@@ -25,7 +25,7 @@ async def start(client, message):
 
 <b>♞ Library:</b> <a href="https://dog/t.me/mazhatthullikal">Pyrogram</a>
 
-I can upload photos or videos to telegraph. Made by @mpazaan
+ @mpazaan
 Hit help button to find out more about how to use me</b>""",   
                             reply_markup=InlineKeyboardMarkup(
                                 [[
