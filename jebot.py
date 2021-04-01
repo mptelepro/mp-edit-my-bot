@@ -59,9 +59,9 @@ async def help(client, message):
                                             "😆Group😀", callback_data="about"),
                                  ],[
                                         InlineKeyboardButton(
-                                            "😈About😈", callback_data="mp"),
+                                            "😈About😈", callback_data="bots"),
                                         InlineKeyboardButton(
-                                            "😆Bots😆", callback_data="bots"),
+                                            "😆Bots😆", callback_data="mp"),
                                   ],[
                                         InlineKeyboardButton(
                                             "🤖Source Code🤖", url="https://t.me/munnipopz")
