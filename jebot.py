@@ -239,10 +239,10 @@ async def button(bot, update):
       elif "start" in cb_data:
         await update.message.delete()
         await start(bot, update.message)
-elif "channel" in cb_data:
+      elif "channel" in cb_data:
         await update.message.delete()
         await channel(bot, update.message)
-elif "admins" in cb_data:
+      elif "admins" in cb_data:
         await update.message.delete()
         await admins(bot, update.message)
 
