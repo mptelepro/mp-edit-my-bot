@@ -56,13 +56,17 @@ async def help(client, message):
                                         InlineKeyboardButton(
                                             "😈Back😈", callback_data="start"),
                                         InlineKeyboardButton(
-                                            "😆Group😀", callback_data="about"),
-                                 ],[
+                                            "😆Group😀", callback_data="about"),                               
                                         InlineKeyboardButton(
                                             "😈About😈", callback_data="bots"),
+                                  ],[
                                         InlineKeyboardButton(
                                             "😆Bots😆", callback_data="mp"),
-                                  ],[
+                                        InlineKeyboardButton(
+                                            "😆Channel😆", callback_data="channel"),
+                                        InlineKeyboardButton(
+                                            "😆Admins😆", callback_data="admins"),               
+                                 ],[
                                         InlineKeyboardButton(
                                             "🤖Source Code🤖", url="https://t.me/munnipopz")
                                     ]]
@@ -235,6 +239,12 @@ async def button(bot, update):
       elif "start" in cb_data:
         await update.message.delete()
         await start(bot, update.message)
+elif "channel" in cb_data:
+        await update.message.delete()
+        await channel(bot, update.message)
+elif "admins" in cb_data:
+        await update.message.delete()
+        await admins(bot, update.message)
 
 print(
     """
