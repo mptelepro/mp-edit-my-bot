@@ -30,12 +30,12 @@ Hit help button to find out more about how to use me</b>""",
                             reply_markup=InlineKeyboardMarkup(
                                 [[
                                         InlineKeyboardButton(
-                                            "Help", callback_data="help"),
+                                            "🤖Help🤖", callback_data="help"),
                                         InlineKeyboardButton(
-                                            "Channel", url="https://t.me/mpazaanbot")
+                                            "💓Channel💓", url="https://t.me/mpazaanbot")
                                     ],[
                                       InlineKeyboardButton(
-                                            "Source Code", url="https://t.me/mazhatthullikal")
+                                            "👁‍🗨Source Code👁‍🗨", url="https://t.me/mazhatthullikal")
                                     ]]
                             ),        
             disable_web_page_preview=True,        
@@ -57,13 +57,14 @@ async def help(client, message):
                                             "😈Back😈", callback_data="start"),
                                         InlineKeyboardButton(
                                             "😆Group😀", callback_data="about"),
+                                 ],[
                                         InlineKeyboardButton(
                                             "😈About😈", callback_data="mp"),
                                         InlineKeyboardButton(
                                             "😆Bots😆", callback_data="bots"),
                                   ],[
                                         InlineKeyboardButton(
-                                            "Source Code", url="https://t.me/munnipopz")
+                                            "🤖Source Code🤖", url="https://t.me/munnipopz")
                                     ]]
                             ),        
             disable_web_page_preview=True,        
