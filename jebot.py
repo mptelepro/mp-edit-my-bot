@@ -70,6 +70,56 @@ async def help(client, message):
             disable_web_page_preview=True,        
             parse_mode="html")
 
+@Jebot.on_message(filters.command("admins"))
+async def admins(client, message):
+    if message.chat.type == 'private':   
+        await Jebot.send_message(
+               chat_id=message.chat.id,
+               text="""<b>channel</b>
+
+<b>♞ Developer:</b> <a href="https://telegra.ph/file/dd451b9d186d65a2187d5.jpg</a>
+
+<b>♞ Support:</b> <a href="https://dog/t.me/mazhatthullikal">Infinity BOTs Support</a>
+
+<b>♞ Library:</b> <a href="https://telegra.ph/file/dd451b9d186d65a2187d5.jpg">Pyrogram</a>
+
+<b>~ @munnipopz</b>""",
+     reply_markup=InlineKeyboardMarkup(
+                                [[
+                                        InlineKeyboardButton(
+                                            "😈Back😈", callback_data="help"),
+                                        InlineKeyboardButton(
+                                            "😈Source Code😈", url="https://t.me/munnipopz")
+                                    ]]
+                            ),        
+            disable_web_page_preview=True,        
+            parse_mode="html")
+
+@Jebot.on_message(filters.command("channel"))
+async def channel(client, message):
+    if message.chat.type == 'private':   
+        await Jebot.send_message(
+               chat_id=message.chat.id,
+               text="""<b>channel</b>
+
+<b>♞ Developer:</b> <a href="https://telegra.ph/file/dd451b9d186d65a2187d5.jpg</a>
+
+<b>♞ Support:</b> <a href="https://dog/t.me/mazhatthullikal">Infinity BOTs Support</a>
+
+<b>♞ Library:</b> <a href="https://telegra.ph/file/dd451b9d186d65a2187d5.jpg">Pyrogram</a>
+
+<b>~ @munnipopz</b>""",
+     reply_markup=InlineKeyboardMarkup(
+                                [[
+                                        InlineKeyboardButton(
+                                            "😈Back😈", callback_data="help"),
+                                        InlineKeyboardButton(
+                                            "😈Source Code😈", url="https://t.me/munnipopz")
+                                    ]]
+                            ),        
+            disable_web_page_preview=True,        
+            parse_mode="html")
+
 @Jebot.on_message(filters.command("mp"))
 async def mp(client, message):
     if message.chat.type == 'private':   
