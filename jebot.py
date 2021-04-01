@@ -75,14 +75,12 @@ async def mp(client, message):
     if message.chat.type == 'private':   
         await Jebot.send_message(
                chat_id=message.chat.id,
-               text="""<b>Mp</b>
-
-
+               text="""<b>About</b>
 <b>~ @munnipopz</b>""",
      reply_markup=InlineKeyboardMarkup(
                                 [[
                                         InlineKeyboardButton(
-                                            "🤑Back🤑", callback_data="help"),
+                                            "🤑Start🤑", callback_data="start"),
                                         InlineKeyboardButton(
                                             "🤑About🤑", callback_data="about")
                                     ]]
