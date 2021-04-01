@@ -90,6 +90,26 @@ async def mp(client, message):
             disable_web_page_preview=True,        
             parse_mode="html")
 
+@Jebot.on_message(filters.command("about"))
+async def about(client, message):
+    if message.chat.type == 'private':   
+        await Jebot.send_message(
+               chat_id=message.chat.id,
+               text="""<b>About Telegraph Bot!</b>
+
+
+<b>~ @munnipopz</b>""",
+     reply_markup=InlineKeyboardMarkup(
+                                [[
+                                        InlineKeyboardButton(
+                                            "🤑Back🤑", callback_data="help"),
+                                        InlineKeyboardButton(
+                                            "🤑About🤑", callback_data="about")
+                                    ]]
+                            ),        
+            disable_web_page_preview=True,        
+            parse_mode="html")
+
 @Jebot.on_message(filters.command("group"))
 async def group(client, message):
     if message.chat.type == 'private':   
