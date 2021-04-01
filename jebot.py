@@ -54,13 +54,13 @@ async def help(client, message):
         reply_markup=InlineKeyboardMarkup(
                                 [[
                                         InlineKeyboardButton(
-                                            "Back", callback_data="start"),
+                                            "😈Back😈", callback_data="start"),
                                         InlineKeyboardButton(
-                                            "About", callback_data="about"),
+                                            "😆Group😀", callback_data="about"),
                                         InlineKeyboardButton(
-                                            "About", callback_data="mp"),
+                                            "😈About😈", callback_data="mp"),
                                         InlineKeyboardButton(
-                                            "Bots", callback_data="bots"),
+                                            "😆Bots😆", callback_data="bots"),
                                   ],[
                                         InlineKeyboardButton(
                                             "Source Code", url="https://t.me/munnipopz")
@@ -81,16 +81,16 @@ async def mp(client, message):
      reply_markup=InlineKeyboardMarkup(
                                 [[
                                         InlineKeyboardButton(
-                                            "Back", callback_data="help"),
+                                            "🤑Back🤑", callback_data="help"),
                                         InlineKeyboardButton(
-                                            "About", callback_data="about")
+                                            "🤑About🤑", callback_data="about")
                                     ]]
                             ),        
             disable_web_page_preview=True,        
             parse_mode="html")
 
-@Jebot.on_message(filters.command("about"))
-async def about(client, message):
+@Jebot.on_message(filters.command("group"))
+async def group(client, message):
     if message.chat.type == 'private':   
         await Jebot.send_message(
                chat_id=message.chat.id,
@@ -100,9 +100,9 @@ async def about(client, message):
      reply_markup=InlineKeyboardMarkup(
                                 [[
                                         InlineKeyboardButton(
-                                            "Back", callback_data="help"),
+                                            "😈Back😈", callback_data="help"),
                                         InlineKeyboardButton(
-                                            "Start", callback_data="start")
+                                            "😈Start😈", callback_data="start")
                                     ]]
                             ),        
             disable_web_page_preview=True,        
@@ -125,9 +125,9 @@ async def bots(client, message):
      reply_markup=InlineKeyboardMarkup(
                                 [[
                                         InlineKeyboardButton(
-                                            "Back", callback_data="help"),
+                                            "😈Back😈", callback_data="help"),
                                         InlineKeyboardButton(
-                                            "Source Code", url="https://t.me/munnipopz")
+                                            "😈Source Code😈", url="https://t.me/munnipopz")
                                     ]]
                             ),        
             disable_web_page_preview=True,        
@@ -142,9 +142,12 @@ async def button(bot, update):
       elif "about" in cb_data:
         await update.message.delete()
         await about(bot, update.message)
+      elif "group" in cb_data:
+        await update.message.delete()
+        await group(bot, update.message)
       elif "mp" in cb_data:
         await update.message.delete()
-        await about(bot, update.message)
+        await mb(bot, update.message)
       elif "bots" in cb_data:
         await update.message.delete()
         await bots(bot, update.message)
