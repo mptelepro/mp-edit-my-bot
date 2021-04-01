@@ -178,7 +178,7 @@ async def button(bot, update):
         await group(bot, update.message)
       elif "mp" in cb_data:
         await update.message.delete()
-        await mb(bot, update.message)
+        await mp(bot, update.message)
       elif "bots" in cb_data:
         await update.message.delete()
         await bots(bot, update.message)
