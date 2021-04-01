@@ -21,7 +21,7 @@ async def start(client, message):
 
 <b>♞ Developer:</b> <a href="https://dog/t.me/mazhatthullikal</a>
 
-<b>♞ Support:</b> <a href="https://dog/t.me/mazhatthullikal">Infinity BOTs Support</a>
+<b>♞ Support:</b> <a href="https://dog/t.me/mazhatthullikal">mpazaan</a>
 
 <b>♞ Library:</b> <a href="https://dog/t.me/mazhatthullikal">Pyrogram</a>
 
@@ -35,7 +35,7 @@ Hit help button to find out more about how to use me</b>""",
                                             "Channel", url="https://t.me/mpazaanbot")
                                     ],[
                                       InlineKeyboardButton(
-                                            "Source Code", url="https:///t.me/mazhatthullikal")
+                                            "Source Code", url="https://t.me/mazhatthullikal")
                                     ]]
                             ),        
             disable_web_page_preview=True,        
@@ -50,7 +50,7 @@ async def help(client, message):
 
 
 
-~ @Infinity_BOTs</b>""",
+~ @mpazaan</b>""",
         reply_markup=InlineKeyboardMarkup(
                                 [[
                                         InlineKeyboardButton(
