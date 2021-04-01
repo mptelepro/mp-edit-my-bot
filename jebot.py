@@ -95,7 +95,6 @@ async def about(client, message):
                chat_id=message.chat.id,
                text="""<b>About</b>
 
-
 <b>~ @munnipopz</b>""",
      reply_markup=InlineKeyboardMarkup(
                                 [[
