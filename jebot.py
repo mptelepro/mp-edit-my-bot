@@ -41,26 +41,38 @@ Hit help button to find out more about how to use me</b>""",
             disable_web_page_preview=True,        
             parse_mode="html")
 
-@Jebot.on_message(filters.command(["helps"]) & filters.private, group=1)
-async def help(bot, update):
-    buttons = [[
-        InlineKeyboardButton('Home ⚡', callback_data='start'),
-        InlineKeyboardButton('About 🚩', callback_data='about')
-    ],[
-        InlineKeyboardButton('Close 🔐', callback_data='close')
-    ]]
-    
-    reply_markup = InlineKeyboardMarkup(buttons)
-    
-    await bot.send_photo(
-        chat_id=update.chat.id,
-        photo="https://telegra.ph//file/d38c95da9e83a8e049078.jpg",
-        caption=Translation.START_TEXT.format(
-                update.from_user.first_name),
-        reply_markup=reply_markup,
-        parse_mode="html",
-        reply_to_message_id=update.message_id
-    )
+@Jebot.on_message(filters.command("help"))
+async def help(client, message):
+    if message.chat.type == 'private':   
+        await Jebot.send_message(
+               chat_id=message.chat.id,
+               text="""<b>
+
+
+
+~ @mpazaan</b>""",
+        reply_markup=InlineKeyboardMarkup(
+                                [[
+                                        InlineKeyboardButton(
+                                            "😈Back😈", callback_data="start"),
+                                        InlineKeyboardButton(
+                                            "😆Group😀", callback_data="about"),                               
+                                        InlineKeyboardButton(
+                                            "😈About😈", callback_data="bots"),
+                                  ],[
+                                        InlineKeyboardButton(
+                                            "😆Bots😆", callback_data="mp"),
+                                        InlineKeyboardButton(
+                                            "😆Channel😆", callback_data="channel"),
+                                        InlineKeyboardButton(
+                                            "😆Admins😆", callback_data="admins"),               
+                                 ],[
+                                        InlineKeyboardButton(
+                                            "🤖Source Code🤖", url="https://t.me/munnipopz")
+                                    ]]
+                            ),        
+            disable_web_page_preview=True,        
+            parse_mode="html")
 
 @Jebot.on_message(filters.command("admins"))
 async def admins(client, message):
@@ -233,9 +245,7 @@ async def button(bot, update):
       elif "admins" in cb_data:
         await update.message.delete()
         await admins(bot, update.message)
-      elif "helps" in cb_data:
-         await update.message.delete()
-         await admins(bot, update.message)
+
 print(
     """
 Bot Started!
