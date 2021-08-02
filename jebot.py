@@ -70,9 +70,17 @@ async def help(client, message):
                                         InlineKeyboardButton(
                                             "🤖Source Code🤖", url="https://t.me/munnipopz")
                                     ]]
-                            ),        
-            disable_web_page_preview=True,        
-            parse_mode="html")
+                            reply_markup = InlineKeyboardMarkup(buttons)
+    
+    await bot.send_photo(
+        chat_id=update.chat.id,
+        photo="https://telegra.ph//file/d38c95da9e83a8e049078.jpg",
+        caption=Translation.START_TEXT.format(
+                update.from_user.first_name),
+        reply_markup=reply_markup,
+        parse_mode="html",
+        reply_to_message_id=update.message_id
+    )
 
 @Jebot.on_message(filters.command("admins"))
 async def admins(client, message):
