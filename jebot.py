@@ -41,7 +41,7 @@ Hit help button to find out more about how to use me</b>""",
             disable_web_page_preview=True,        
             parse_mode="html")
 
-@Jebot.on_message(filters.command(["help"]) & filters.private, group=1)
+@Jebot.on_message(filters.command(["helps"]) & filters.private, group=1)
 async def help(bot, update):
     buttons = [[
         InlineKeyboardButton('Home ⚡', callback_data='start'),
@@ -233,7 +233,9 @@ async def button(bot, update):
       elif "admins" in cb_data:
         await update.message.delete()
         await admins(bot, update.message)
-
+      elif "helps" in cb_data:
+         await update.message.delete()
+         await admins(bot, update.message)
 print(
     """
 Bot Started!
