@@ -12,81 +12,34 @@ Jebot = Client(
    bot_token=Config.TG_BOT_TOKEN,
 )
 
-@Jebot.on_message(filters.command(["start"]) & filters.private, group=1)
-async def start(bot, update):
-    update_channel = "@bigmoviesworld"
-    if update_channel:
-        try:
-            user = await bot.get_chat_member(update_channel, update.chat.id)
-            if user.status == "kicked out":
-               await update.reply_text("🤭 Sorry Dude, You are B A N N E D 🤣🤣🤣")
-               return
-        except UserNotParticipant:
-            #await update.reply_text(f"Join @{update_channel} To Use Me")
-            await update.reply_text(
-                text="𝐘𝐨𝐮 𝐦𝐮𝐬𝐭 𝐣𝐨𝐢𝐧 𝐨𝐮𝐫 𝐜𝐡𝐚𝐧𝐧𝐞𝐥 ᴛᴏ ᴜꜱᴇ ᴍᴇ </b>",
-                reply_markup=InlineKeyboardMarkup([
-                    [ InlineKeyboardButton(text=" 🔰JOIN OUR CHANNEL🔰 ", url=f"https://t.me/bigmoviesworld")]
-              ])
-            )
-            return
-        except Exception:
-            await update.reply_text("Something Wrong. Contact my Support Group")
-            return 
-    
-    try:
-        file_uid = update.command[1]
-    except IndexError:
-        file_uid = False
-    
-    if file_uid:
-        file_id, file_name, file_caption, file_type = await db.get_file(file_uid)
-        
-        if (file_id or file_type) == None:
-            return
-        
-        caption = file_caption if file_caption != ("" or None) else ("<code>" + file_name + "</code>")
-        try:
-            await update.reply_cached_media(
-                file_id,
-                quote=True,
-                caption = caption,
-                parse_mode="html",
-                reply_markup=InlineKeyboardMarkup(
-                    [
-                        [
-                            InlineKeyboardButton
-                                (
-                                    'Developers', url="https://t.me/CrazyBotsz"
-                                )
-                        ]
-                    ]
-                )
-            )
-        except Exception as e:
-            await update.reply_text(f"<b>Error:</b>\n<code>{e}</code>", True, parse_mode="html")
-            LOGGER(__name__).error(e)
-        return
+@Jebot.on_message(filters.command("start"))
+async def start(client, message):
+   if message.chat.type == 'private':
+       await Jebot.send_message(
+        chat_id=message.chat.id,
+               text="""<b>♞ Developer:</b> <a href="https://dog/t.me/mazhatthullikal</b>
 
-    buttons = [[
-        InlineKeyboardButton('Developers', url='https://t.me/CrazyBotsz'),
-        InlineKeyboardButton('Source Code 🧾', url ='https://github.com/CrazyBotsz/Adv-Auto-Filter-Bot-V2')
-    ],[
-        InlineKeyboardButton('Support 🛠', url='https://t.me/CrazyBotszGrp')
-    ],[
-        InlineKeyboardButton('Help ⚙', callback_data="help")
-    ]]
-    
-    reply_markup = InlineKeyboardMarkup(buttons)
-    
-    await bot.send_message(
-        chat_id=update.chat.id,
-        text=Translation.START_TEXT.format(
-                update.from_user.first_name),
-        reply_markup=reply_markup,
-        parse_mode="html",
-        reply_to_message_id=update.message_id
-    )
+<b>♞ Developer:</b> <a href="https://dog/t.me/mazhatthullikal</a>
+
+<b>♞ Support:</b> <a href="https://dog/t.me/mazhatthullikal">mpazaan</a>
+
+<b>♞ Library:</b> <a href="https://dog/t.me/mazhatthullikal">Pyrogram</a>
+
+ @mpazaan
+Hit help button to find out more about how to use me</b>""",   
+                            reply_markup=InlineKeyboardMarkup(
+                                [[
+                                        InlineKeyboardButton(
+                                            "🤖Help🤖", callback_data="help"),
+                                        InlineKeyboardButton(
+                                            "💓Channel💓", url="https://t.me/mpazaanbot")
+                                    ],[
+                                      InlineKeyboardButton(
+                                            "👁‍🗨Source Code👁‍🗨", url="https://t.me/mazhatthullikal")
+                                    ]]
+                            ),        
+            disable_web_page_preview=True,        
+            parse_mode="html")
 
 @Jebot.on_message(filters.command("help"))
 async def help(client, message):
