@@ -45,7 +45,8 @@ async def help(client, message):
     if message.chat.type == 'private':   
         await Jebot.send_message(
                chat_id=message.chat.id,
-               text=
+               text="""<b>♞ ᴅᴇᴠᴇʟᴏᴘᴇʀ:</b> <a href="https://dog/t.me/munnipopz</b>
+
                
         reply_markup=InlineKeyboardMarkup(
                                 [[
