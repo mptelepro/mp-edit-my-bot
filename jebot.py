@@ -17,7 +17,7 @@ async def start(client, message):
    if message.chat.type == 'private':
        await Jebot.send_message(
         chat_id=message.chat.id,
-               text="""<b>♞ ᴅᴇᴠᴇʟᴏᴘᴇʀ:</b> <a href="https://dog/t.me/mazhatthullikal</b>
+               text="""<b>♞ ᴅᴇᴠᴇʟᴏᴘᴇʀ:</b> <a href="https://dog/t.me/munnipopz</b>
 
 <b>♞ ꜱᴜᴘᴘᴏʀᴛ:</b> <a href="https://dog/t.me/munnipopz</a>
 
