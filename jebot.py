@@ -17,25 +17,24 @@ async def start(client, message):
    if message.chat.type == 'private':
        await Jebot.send_message(
         chat_id=message.chat.id,
-               text="""<b>♞ Developer:</b> <a href="https://dog/t.me/mazhatthullikal</b>
+               text="""<b>♞ ᴅᴇᴠᴇʟᴏᴘᴇʀ:</b> <a href="https://dog/t.me/mazhatthullikal</b>
 
-<b>♞ Developer:</b> <a href="https://dog/t.me/mazhatthullikal</a>
+<b>♞ ꜱᴜᴘᴘᴏʀᴛ:</b> <a href="https://dog/t.me/munnipopz</a>
 
-<b>♞ Support:</b> <a href="https://dog/t.me/mazhatthullikal">mpazaan</a>
+<b>♞ ꜱᴜᴘᴘᴏʀᴛ:</b> <a href="https://dog/t.me/mazhatthullikal">ᴍᴘᴀᴢᴀᴀɴ</a>
 
-<b>♞ Library:</b> <a href="https://dog/t.me/mazhatthullikal">Pyrogram</a>
+<b>♞ ꜱᴜᴘᴘᴏʀᴛ:</b> <a href="https://dog/t.me/mazhatthullikal">ᴘʏʀᴏɢʀᴀᴍ</a>
 
- @mpazaan
-Hit help button to find out more about how to use me</b>""",   
+ʜɪᴛ ʜᴇʟᴘ ʙᴜᴛᴛᴏɴ ᴛᴏ ꜰɪɴᴅ ᴏᴜᴛ ᴍᴏʀᴇ ᴀʙᴏᴜᴛ ʜᴏᴡ ᴛᴏ ᴜꜱᴇ ᴍᴇ</b>""",   
                             reply_markup=InlineKeyboardMarkup(
                                 [[
                                         InlineKeyboardButton(
-                                            "🤖Help🤖", callback_data="help"),
+                                            "🤖ʜᴇʟᴘ🤖", callback_data="help"),
                                         InlineKeyboardButton(
-                                            "💓Channel💓", url="https://t.me/mpazaanbot")
+                                            "💓ᴄʜᴀɴɴᴇʟ💓", url="https://t.me/mpazaanbot")
                                     ],[
                                       InlineKeyboardButton(
-                                            "👁‍🗨Source Code👁‍🗨", url="https://t.me/mazhatthullikal")
+                                            "👁‍🗨ꜱᴏᴜʀᴄᴇ ᴄᴏᴅᴇ👁‍🗨", url="https://t.me/mazhatthullikal")
                                     ]]
                             ),        
             disable_web_page_preview=True,        
@@ -54,21 +53,21 @@ async def help(client, message):
         reply_markup=InlineKeyboardMarkup(
                                 [[
                                         InlineKeyboardButton(
-                                            "😈Back😈", callback_data="start"),
+                                            "😈ʙᴀᴄᴋ😈", callback_data="start"),
                                         InlineKeyboardButton(
-                                            "😆Group😀", callback_data="about"),                               
+                                            "😆ɢʀᴏᴜᴘ😀", callback_data="about"),                               
                                         InlineKeyboardButton(
-                                            "😈About😈", callback_data="bots"),
+                                            "😈ᴀʙᴏᴜᴛ😈", callback_data="bots"),
                                   ],[
                                         InlineKeyboardButton(
-                                            "😆Bots😆", callback_data="mp"),
+                                            "😆ʙᴏᴛꜱ😆", callback_data="mp"),
                                         InlineKeyboardButton(
-                                            "😆Channel😆", callback_data="channel"),
+                                            "😆ᴄʜᴀɴɴᴇʟ😆", callback_data="channel"),
                                         InlineKeyboardButton(
-                                            "😆Admins😆", callback_data="admins"),               
+                                            "😆ᴀᴅᴍɪɴꜱ😆", callback_data="admins"),               
                                  ],[
                                         InlineKeyboardButton(
-                                            "🤖Source Code🤖", url="https://t.me/munnipopz")
+                                            "🤖ꜱᴏᴜʀᴄᴇ ᴄᴏᴅᴇ🤖", url="https://t.me/munnipopz")
                                     ]]
                             ),        
             disable_web_page_preview=True,        
