@@ -46,8 +46,7 @@ async def help(client, message):
         await Jebot.send_message(
                chat_id=message.chat.id,
                text="""<b>♞ ᴅᴇᴠᴇʟᴏᴘᴇʀ:</b> <a href="https://dog/t.me/munnipopz</b>
-
-               
+ʜɪᴛ ʜᴇʟᴘ ʙᴜᴛᴛᴏɴ ᴛᴏ ꜰɪɴᴅ ᴏᴜᴛ ᴍᴏʀᴇ ᴀʙᴏᴜᴛ ʜᴏᴡ ᴛᴏ ᴜꜱᴇ ᴍᴇ</b>""",                 
         reply_markup=InlineKeyboardMarkup(
                                 [[
                                         InlineKeyboardButton(
