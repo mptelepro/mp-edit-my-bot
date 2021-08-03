@@ -45,11 +45,15 @@ async def help(client, message):
     if message.chat.type == 'private':   
         await Jebot.send_message(
                chat_id=message.chat.id,
-               text="""<b>
+               text="""<b>♞ ᴅᴇᴠᴇʟᴏᴘᴇʀ:</b> <a href="https://dog/t.me/mazhatthullikal</b>
 
+<b>♞ ꜱᴜᴘᴘᴏʀᴛ:</b> <a href="https://dog/t.me/munnipopz</a>
 
+<b>♞ ꜱᴜᴘᴘᴏʀᴛ:</b> <a href="https://dog/t.me/mazhatthullikal">ᴍᴘᴀᴢᴀᴀɴ</a>
 
-~ @mpazaan</b>""",
+<b>♞ ꜱᴜᴘᴘᴏʀᴛ:</b> <a href="https://dog/t.me/mazhatthullikal">ᴘʏʀᴏɢʀᴀᴍ</a>
+
+ʜɪᴛ ʜᴇʟᴘ ʙᴜᴛᴛᴏɴ ᴛᴏ ꜰɪɴᴅ ᴏᴜᴛ ᴍᴏʀᴇ ᴀʙᴏᴜᴛ ʜᴏᴡ ᴛᴏ ᴜꜱᴇ ᴍᴇ</b>""",
         reply_markup=InlineKeyboardMarkup(
                                 [[
                                         InlineKeyboardButton(
